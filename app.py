@@ -4,6 +4,7 @@ import pickle
 import numpy as np
 import os
 
+
 # Custom CSS with tooltip range hover and UI enhancements
 st.markdown("""
 <style>
@@ -185,7 +186,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Load model and scaler
 @st.cache_resource
 def load_model_and_scaler():
     base_path = os.path.dirname(__file__)
