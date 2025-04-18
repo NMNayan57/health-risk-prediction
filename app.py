@@ -187,9 +187,13 @@ st.markdown("""
 # Load model and scaler
 @st.cache_resource
 def load_model_and_scaler():
-    with open('xgb_model.pkl', 'rb') as f:
+    base_path = os.path.dirname(__file__)
+    model_path = os.path.join(base_path, 'xgb_model.pkl')
+    scaler_path = os.path.join(base_path, 'scaler.pkl')
+
+    with open(model_path, 'rb') as f:
         model = pickle.load(f)
-    with open('scaler.pkl', 'rb') as f:
+    with open(scaler_path, 'rb') as f:
         scaler = pickle.load(f)
     return model, scaler
 
