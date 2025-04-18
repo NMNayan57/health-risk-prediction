@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
+import os
 
 # Custom CSS with tooltip range hover and UI enhancements
 st.markdown("""
